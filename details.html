@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Magazin pesti</title>
+ 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity-fullscreen@1/fullscreen.css">
+    <link rel="stylesheet" type="text/css" href="css/style-pesti.css">
+    <link rel="stylesheet" type="text/css" href="css/materialize.css">
+    <link rel="stylesheet" type="text/css" href="css/details.css">
+    <link rel="stylesheet" type="text/css" href="css/grid.css">
+  <script src='js/details.js'></script>
+  <script  type="text/javascript" src='js/materialize.js'></script>
+  <script async src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <script  src="https://unpkg.com/flickity-fullscreen@1/fullscreen.js"></script> 
+  </head>
+  <body onload="draw();">
+      <nav>
+          <div class="nav-wrapper">
+              <a href="index2.html" class="brand-logo">Magazin Pesti</a>
+              <ul  id="nav-mobile" class="right hide-on-small-and-down">
+                <li>  <a class="waves-effect waves-light btn button" href="cart.html"><i class="material-icons left">shopping_cart</i>Coș</a></li>
+                <li> <a class="waves-effect waves-light btn button" href="admin.html"><i class="material-icons left">supervisor_account</i>Admin</a></li>
+              </ul>   
+              <ul  id="nav-mobile" class="right hide-on-med-and-up">
+                  <li>  <a class="" href="cart.html"><i class="material-icons left">shopping_cart</i></a></li>
+                  <li> <a class="" href="admin.html"><i class="material-icons left">supervisor_account</i></a></li>
+                </ul>                                               
+            </div>
+                                                          
+          </nav>
+  <div id="product-details">
+      <div class="fish-info">
+          <div class="col-lg-6 col-md-6 col-xs-12 fish-image-holder">
+      <div class="carousel carousel-main" data-flickity='{"contain": true,"lazyLoad": 1, "prevNextButtons": false, "wrapAround": true }' id="slider-resp">
+          <div class="carousel-cell fish-bg bg1"></div>
+          <div class="carousel-cell fish-bg bg2"></div> 
+          <div class="carousel-cell fish-bg bg3"></div>  
+          <div class="carousel-cell fish-bg bg4"></div>
+        </div>   
+
+        <div class="carousel carousel-nav" id="nav-slider-resp"
+          data-flickity='{ "asNavFor": ".carousel-main", "contain": true, "pageDots": false, "wrapAround": true }'>
+          <div class="carousel-cell fish-bg" style="background-size:cover;" id="s-bg1"></div>
+          <div class="carousel-cell fish-bg" style="background-size:cover;" id="s-bg2"></div>
+          <div class="carousel-cell fish-bg" style="background-size:cover;" id="s-bg3"></div> 
+          <div class="carousel-cell fish-bg" style="background-size:cover;" id="s-bg4"></div>     
+        </div>
+        </div>
+        <div class= "col-lg-6 col-md-6 col-xs-12 container" id="info1-resp">
+      
+           
+          </div>
+          <div class="col-lg-11 col-md-11 col-xs-11 desc-holder" id="info2-resp">
+             
+          </div>  
+         
+         </div></div>
+         <script> document.addEventListener('load', function() {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems, {  inDuration: 350,
+          outDuration: 350,
+          edge: 'left'});
+          });</script>
+    
+  </body>
+</html>
+

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Magazin pesti</title>
+    <link rel="stylesheet" type="text/css" href="css/materialize.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style-pesti.css">
+    <link rel="stylesheet" type="text/css" href="css/grid.css">
+    <link rel="stylesheet" type="text/css" href="css/admin.css">
+    <script src='js/admin.js'></script>
+    <script src='js/materialize.js'></script>
+  </head>
+  <body onload="draw();">
+      <nav>
+          <div class="nav-wrapper">
+              <a href="index2.html" class="brand-logo">Magazin Pesti</a>
+              <ul  id="nav-mobile" class="right hide-on-small-and-down">
+                <li>  <a class="waves-effect waves-light btn button" href="cart.html"><i class="material-icons left">shopping_cart</i>Coș</a></li>
+                <li> <a class="waves-effect waves-light btn button" href="admin.html"><i class="material-icons left">supervisor_account</i>Admin</a></li>
+              </ul>   
+              <ul  id="nav-mobile" class="right hide-on-med-and-up">
+                  <li>  <a class="" href="cart.html"><i class="material-icons left">shopping_cart</i></a></li>
+                  <li> <a class="" href="admin.html"><i class="material-icons left">supervisor_account</i></a></li>
+                </ul>                                               
+            </div>
+                                                          
+          </nav>
+  <div id="catalog"><div id="header">
+      <div class="col-lg-6 col-md-6 col-xs-6">
+    <h2>Gestionare produse</h2></div>
+    <div class="col-lg-6 col-md-6 col-xs-6 button-hold"><a class="waves-effect waves-light btn" onclick="showForm();"><i class="material-icons left">add</i>Adaugă produs</a> </div></div>
+   <div class="catalog-info collection" style="border:0;">
+        <div class="title collection-item" style="border:0;">Imagine</div> 
+        <div  class="title collection-item" style="border:0;">Nume</div>
+        <div  class="title collection-item" style="border:0;">Descriere Scurtă</div>  
+        <div class="rightAlign title collection-item" style="border:0;">Preț</div> 
+        <div class="rightAlign title collection-item" style="border:0;">Cantitate</div>
+        <div class="rightAlign title collection-item" style="border:0;"></div>
+   </div> 
+
+   <div class="catalog-info collection" id="response">
+     
+</div>
+  </div>
+  <form id="addProduct" class="hidden">
+  <fildset>
+    <legend id="legendControl"><h2>Adăugați un produs nou</h2> <div id="button-place">
+        <a class="waves-effect waves-light btn button" onclick="addProduct();"><i class="material-icons left">check</i>Salvează</a>
+      <a class="waves-effect waves-light btn button" onclick="showCatalog();"><i class="material-icons left">cancel</i>Anulează</a>
+      </div></legend>
+    <div id="formControl">
+        <div class="row">
+            <div class="input-field col s6">
+              <input id="nume" type="text" class="validate" name="nume">
+              <label for="nume">Nume:</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="pret" type="number" class="validate" name="pret" min="0">
+              <label for="pret">Preț:</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+                <textarea id="descriere" class="materialize-textarea" name="descriere"></textarea>
+                <label for="descriere">Descriere</label>
+            </div>
+          </div>
+          <div class="row">
+              <div class="input-field col s12">
+                  <textarea id="descriereScurta" class="materialize-textarea" name="descriereScurta"></textarea>
+                  <label for="descriereScurta">Descriere Scurtă:</label>
+              </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input id="imagine" type="text" class="validate" name="imagine">
+              <label for="imagine">URL Imagine 1:</label>
+                </div>
+                <div class="input-field col s6">
+                    <input id="imagine1" type="text" class="validate" name="imagine1">
+              <label for="imagine1">URL Imagine 2:</label>
+                </div>
+              </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="imagine2" type="text" class="validate" name="imagine2">
+                  <label for="imagine2">URL Imagine 3:</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="imagine3" type="text" class="validate" name="imagine3">
+                  <label for="imagine3">URL Imagine 4:</label>
+                    </div>
+                  </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="cantitate" type="number" class="validate" name="cantitate" min="0">
+              <label for="cantitate">Cantitate:</label>
+                        </div>
+                      </div>
+    </div>
+
+            
+  </fildset>
+  </form>
+  
+  <script>
+      document.addEventListener('load', function() {
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems, {  inDuration: 350,
+      outDuration: 350,
+      edge: 'left'});
+      });</script>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Magazin pesti</title>
+    <link rel="stylesheet" type="text/css" href="css/materialize.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style-pesti.css">
+    <link rel="stylesheet" type="text/css" href="css/grid.css">
+    <link rel="stylesheet" type="text/css" href="css/cart.css">
+    <script src='js/materialize.js'></script>
+    <script src='js/cart.js'></script>
+  </head>
+  <body onload="cartContent();">
+      <nav>
+          <div class="nav-wrapper">
+              <a href="index2.html" class="brand-logo">Magazin Pesti</a>
+              <ul  id="nav-mobile" class="right hide-on-small-and-down">
+                <li>  <a class="waves-effect waves-light btn button" href="cart.html"><i class="material-icons left">shopping_cart</i>Coș</a></li>
+                <li> <a class="waves-effect waves-light btn button" href="admin.html"><i class="material-icons left">supervisor_account</i>Admin</a></li>
+              </ul>   
+              <ul  id="nav-mobile" class="right hide-on-med-and-up">
+                  <li>  <a class="" href="cart.html"><i class="material-icons left">shopping_cart</i></a></li>
+                  <li> <a class="" href="admin.html"><i class="material-icons left">supervisor_account</i></a></li>
+                </ul>                                               
+            </div>
+                                                          
+          </nav>
+
+<div class="container" id="cartBody">
+  <div class="header">  <h4>Coș cumpărături</h4>
+  </div>
+  <div class="col-lg-7 col-md-7 col-xs-12" >
+      <div id="cart-header" class="collection hide-on-small-and-down">
+          <div class="collection-item">Produs</div> 
+          <div  class="collection-item">Nume</div>
+          <div  class="collection-item">Cantitate</div>  
+          <div class="collection-item" >Preț</div> 
+          </div>
+      <div id="cart-content" class="collection">
+
+          </div>
+      </div>  
+        <div class="col-lg-5 col-md-5 col-xs-12 summary center-on-small-only valign-wrapper">
+      <h4>Sumar comandă</h4>
+      <div class="rightAlign col-lg-9 col-md-9 col-xs-9">Produse:</div><div id="products-number" class="rightAlign col-lg-3 col-md-3 col-xs-3 padding-right">1</div>
+      <div class="rightAlign col-lg-9 col-md-9 col-xs-9">TVA:</div><div id="tva" class="rightAlign col-lg-3 col-md-3 col-xs-3 padding-right">24%</div>
+      <div class="rightAlign col-lg-9 col-md-9 col-xs-9"><h5>Total:</h5></div><div id="total" class="rightAlign col-lg-3 col-md-3 col-xs-3 padding-right"><h6>100 LEI</h6></div>
+      <div class="col-lg-10 col-md-10 col-xs-10 place-order" ><a class="waves-effect waves-light btn button" onclick="orderPlaced();"><i class="material-icons right">arrow_forward</i>Plasează Comanda</a></div>
+    </div>  
+</div>
+
+                       
+
+              
+<script>
+  document.addEventListener('load', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems, {  inDuration: 350,
+  outDuration: 350,
+  edge: 'left'});
+  });</script>
+  </body>
+</html>

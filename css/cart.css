@@ -1,0 +1,126 @@
+#cart-header{
+    display: GRID;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-right: 2rem;
+    border:none;
+}
+.header{
+    width:100%;
+}
+#cartBody,.summary{
+    display: flex;
+    flex-wrap: wrap;
+}
+#cart-content{
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 2rem;
+    border: none;
+}
+.container{
+    width:90%;
+}
+.summary>h4{
+    width:100%;
+    padding-left: 3rem;
+}
+.rightAlign{
+    text-align:right;
+}
+.padding-right{
+    padding-right:2rem;
+}
+.place-order{
+    padding: 0 0 2rem 2rem;
+}
+.summary{
+    border:1px solid #e0e0e0;
+}
+.collection .collection-item:last-child{
+    border-bottom:1px solid #e0e0e0; 
+}
+.small-img{
+    width:100px;
+}
+      
+tr{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+@media (max-width:600px){
+    .container{
+        padding-left:0;
+        padding-right:0;}
+        tr{
+            display: flex;
+    flex-wrap: wrap;
+        }
+        td{
+            width:100%;
+            padding-top:0px;
+            padding-bottom:5px;
+        }
+        .qty{
+            padding-top: 0.5em!important;
+            padding-bottom: 0.5rem!important;
+        }
+    }
+    form {
+        margin: 0 auto;
+        text-align: center;
+        display:flex;
+      }
+      
+      .value-button {
+        display: inline-block;
+        border: 1px solid #ddd;
+        margin: 0px;
+        width: 20px;
+        height: 30px;
+        text-align: center;
+        vertical-align: middle;
+        padding-top: 5px;
+        background: #eee;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      
+      .value-button:hover {
+        cursor: pointer;
+      }
+      
+      form #decrease {
+        margin-right: -4px;
+        border-radius: 8px 0 0 8px;
+      }
+      
+      form #increase {
+        margin-left: -4px;
+        border-radius: 0 8px 8px 0;
+      }
+      
+      form #input-wrap {
+        margin: 0px;
+        padding: 0px;
+      }
+      
+      input#number {
+        text-align: center;
+        border: none;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        margin: 0px;
+        width: 25px;
+        height: 28px;
+      }
+      
+      input[type=number]::-webkit-inner-spin-button,
+      input[type=number]::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+      }
+  
